@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //     * 3. Программа 5 раз спрашивает по 2 числа, сравнивает их и выводит большее
+      // число из них в консоль. Но в конце программы, вам нужно вывести в консоль самое
+      // большое число из всех ранее введенных.
+
+      let maxNumber = 0;
+
+      for (let i = 0; i < 5; i++) {
+        const inputNum1 = +prompt('Введите 1е число:');
+        const inputNum2 = +prompt('Введите 2е число:');
+
+        if (inputNum1 === inputNum2) {
+          console.log(inputNum1);
+
+          if (inputNum1 > maxNumber) {
+            maxNumber = inputNum1;
+          }
+        }
+
+        if (inputNum1 > inputNum2) {
+          console.log(inputNum1);
+
+          if (inputNum1 > maxNumber) {
+            maxNumber = inputNum1;
+          }
+        }
+
+        if (inputNum1 < inputNum2) {
+          console.log(inputNum2);
+
+          if (inputNum2 > maxNumber) {
+            maxNumber = inputNum2;
+          }
+        }
+      }
+
+      console.log('maxNumber:', maxNumber);
+    </script>
+  </body>
+</html>
